@@ -17,6 +17,7 @@ To run (after installing packages above), enter:
     'python3 symmetry.py'
 from the command line.
 
+Every plane symmetry group has been implemented except four - p3m1, p31m, p6 and p6m. https://en.wikipedia.org/wiki/Wallpaper_group
 
 ###### Bugs
 
