@@ -7,7 +7,7 @@ pillow https://pillow.readthedocs.io/en/stable/installation.html
 
 tkinter (installs with python) https://docs.python.org/3/library/tkinter.html
 
-math (inside python standard library)
+math (inside python's standard library)
 
 numpy https://scipy.org/install.html
 
@@ -20,4 +20,5 @@ from the command line.
 
 ###### Bugs
 
-Text on buttons may not be showing correctly - I think this an issue with MacOS and might be fine on some OS versions or on Windows.
+Text on buttons may not be showing correctly - I think this an issue with MacOSX and might be fine on some versions or on Windows.
+In any case I added labels next to each button so you can infer what they're meant to do.
