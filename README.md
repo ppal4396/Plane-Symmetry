@@ -13,6 +13,6 @@ numpy
 
 If you're using a version of Mac OS later than OS X, tkinter has serious bugs before python3.7.4. Install this version of python or later to run this program.
 
-To run, enter
-  'python3 symmetry.py'
+To run, enter:
+    'python3 symmetry.py'
 from the command line
