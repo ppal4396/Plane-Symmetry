@@ -11,56 +11,72 @@ class GUI:
     def __init__(self, master):
         self.master = master
         master.title("Window")
-
-        self.label = tk.Label(master, text="Canvas", fg = "light green")
-        self.label.pack()
-
         self.symmetry = None
         self.imageChosen = False
 
+        self.label = tk.Label(master, text="Welcome to Plane Symmetry.\n Convert an image to a planar\n pattern using the buttons below!", fg = "black")
+        self.label.grid(row=0)
+
+        chooseImage_label = tk.Label(master,text="Choose an image",fg = "black",bg="white")
+        chooseImage_label.grid(row=1)
         self.getImage_button = tk.Button(master, text="Choose an image",fg = "black",bg="white", command=self.getImage)
-        self.getImage_button.pack()
+        self.getImage_button.grid(row=1,column=1)
 
-        self.symmetry442_button = tk.Button(master, text="442 Symmetry",fg = "black",bg="white", command=self.choose442)
-        self.symmetry442_button.pack()
-
-        self.symmetryStar442_button = tk.Button(master, text="*442 Symmetry",fg = "black",bg="white", command=self.chooseStar442)
-        self.symmetryStar442_button.pack()
-
-        self.symmetry4Star2_button = tk.Button(master, text="4*2 Symmetry",fg = "black",bg="white", command= self.choose4Star2)
-        self.symmetry4Star2_button.pack()
-
-        self.symmetry2Star22_button = tk.Button(master, text="2*22 Symmetry",fg = "black",bg="white", command= self.choose2Star22)
-        self.symmetry2Star22_button.pack()
-
-        self.symmetry2222_button = tk.Button(master, text="2222 Symmetry",fg = "black",bg="white", command= self.choose2222)
-        self.symmetry2222_button.pack()
-
-        self.symmetry22Star_button = tk.Button(master, text="22* Symmetry",fg = "black",bg="white", command= self.choose22Star)
-        self.symmetry22Star_button.pack()
-
-        self.symmetryStar2222_button = tk.Button(master, text="*2222 Symmetry",fg = "black",bg="white", command= self.chooseStar2222)
-        self.symmetryStar2222_button.pack()
-
-        self.symmetry22x_button = tk.Button(master, text="22x Symmetry",fg = "black",bg="white", command= self.choose22x)
-        self.symmetry22x_button.pack()
-
-        self.symmetryStarx_button = tk.Button(master, text="*x Symmetry",fg = "black",bg="white", command= self.chooseStarx)
-        self.symmetryStarx_button.pack()
-
-        self.symmetryStarStar_button = tk.Button(master, text="** Symmetry",fg = "black",bg="white", command= self.chooseStarStar)
-        self.symmetryStarStar_button.pack()
-
-        self.symmetryxx_button = tk.Button(master, text="xx Symmetry",fg = "black",bg="white", command= self.choosexx)
-        self.symmetryxx_button.pack()
-
+        label_o = tk.Label(master,text="o Symmetry",fg = "black",bg="white").grid(row=2)
         self.symmetryo_button = tk.Button(master, text="o Symmetry",fg = "black",bg="white", command= self.chooseo)
-        self.symmetryo_button.pack()
+        self.symmetryo_button.grid(row=2,column=1)
 
+        label_2222 = tk.Label(master,text="2222 Symmetry",fg = "black",bg="white").grid(row=3)
+        self.symmetry2222_button = tk.Button(master, text="2222 Symmetry",fg = "black",bg="white", command= self.choose2222)
+        self.symmetry2222_button.grid(row=3,column=1)
+
+        label_starstar = tk.Label(master, text="** Symmetry",fg = "black",bg="white").grid(row=4)
+        self.symmetryStarStar_button = tk.Button(master, text="** Symmetry",fg = "black",bg="white", command= self.chooseStarStar)
+        self.symmetryStarStar_button.grid(row=4,column=1)
+
+        label_xx = tk.Label(master, text="xx Symmetry", fg= "black", bg="white").grid(row=5)
+        self.symmetryxx_button = tk.Button(master, text="xx Symmetry",fg = "black",bg="white", command= self.choosexx)
+        self.symmetryxx_button.grid(row=5,column=1)
+
+        label_starx = tk.Label(master, text="*x Symmetry", fg= "black", bg="white").grid(row=6)
+        self.symmetryStarx_button = tk.Button(master, text="*x Symmetry",fg = "black",bg="white", command= self.chooseStarx)
+        self.symmetryStarx_button.grid(row=6,column=1)
+
+        label_442 = tk.Label(master, text="442 Symmetry", fg= "black", bg="white").grid(row=7)
+        self.symmetry442_button = tk.Button(master, text="442 Symmetry",fg = "black",bg="white", command=self.choose442)
+        self.symmetry442_button.grid(row=7,column=1)
+
+        label_Star442 = tk.Label(master, text="*442 Symmetry", fg= "black", bg="white").grid(row=8)
+        self.symmetryStar442_button = tk.Button(master, text="*442 Symmetry",fg = "black",bg="white", command=self.chooseStar442)
+        self.symmetryStar442_button.grid(row=8,column=1)
+
+        label_4Star2 = tk.Label(master, text="4*2 Symmetry", fg= "black", bg="white").grid(row=9)
+        self.symmetry4Star2_button = tk.Button(master, text="4*2 Symmetry",fg = "black",bg="white", command= self.choose4Star2)
+        self.symmetry4Star2_button.grid(row=9,column=1)
+
+        label_2Star22 = tk.Label(master, text="2*22 Symmetry", fg= "black", bg="white").grid(row=10)
+        self.symmetry2Star22_button = tk.Button(master, text="2*22 Symmetry",fg = "black",bg="white", command= self.choose2Star22)
+        self.symmetry2Star22_button.grid(row=10,column=1)
+
+        label_22Star = tk.Label(master, text="22* Symmetry", fg= "black", bg="white").grid(row=11)
+        self.symmetry22Star_button = tk.Button(master, text="22* Symmetry",fg = "black",bg="white", command= self.choose22Star)
+        self.symmetry22Star_button.grid(row=11,column=1)
+
+        label_Star2222 = tk.Label(master, text="*2222 Symmetry", fg= "black", bg="white").grid(row=12)
+        self.symmetryStar2222_button = tk.Button(master, text="*2222 Symmetry",fg = "black",bg="white", command= self.chooseStar2222)
+        self.symmetryStar2222_button.grid(row=12,column=1)
+
+        label_22x = tk.Label(master, text="22x Symmetry", fg= "black", bg="white").grid(row=13)
+        self.symmetry22x_button = tk.Button(master, text="22x Symmetry",fg = "black",bg="white", command= self.choose22x)
+        self.symmetry22x_button.grid(row=13,column=1)
+
+        label_333 = tk.Label(master, text="333 Symmetry", fg= "black", bg="white").grid(row=14)
         self.symmetry333_button = tk.Button(master, text="333 Symmetry",fg = "black",bg="white", command= self.choose333)
-        self.symmetry333_button.pack()
+        self.symmetry333_button.grid(row=14,column=1)
 
-        self.imagesLoaded = False
+        self.imagesLoaded =False
+
+        help = tk.Label(master, text="Try to only choose\n one symmetry\n at a time", fg = "black").grid(row=10, column=3)
 
 
     def choose442(self):
@@ -130,6 +146,7 @@ class GUI:
         self.imageChosen = True
 
     def symmetry333(self, image):
+        # bug: weird pixel tearing when tiling hexagons in last step.
         # cut 1/3 of a hexagon with radius 100 out of square (200,200) image to
         # get a diamond shaped fundamental domain (fd)
 
@@ -409,7 +426,7 @@ class GUI:
         layerCount = -1
 
         for y in range(startY,800,stepY):
-            for x in range(startX,800,stepX):
+            for x in range(startX,800+(math.ceil(hexWidth/2)),stepX):
                 j = x
                 k = y
                 if layerCount%2!=0:
@@ -445,7 +462,7 @@ def tick(my_gui):
 
 
 root = tk.Tk()
-root.configure(background='black')
+root.configure(background='white')
 root.wm_attributes('-alpha',1)
 my_gui = GUI(root)
 root.geometry("800x800")
