@@ -147,9 +147,9 @@ class GUI:
 
     def symmetry333(self, image):
         # bug: weird pixel tearing when tiling hexagons in last step.
+
         # cut 1/3 of a hexagon with radius 100 out of square (200,200) image to
         # get a diamond shaped fundamental domain (fd)
-
         polygon = [(0,0), (87, 50), (87, 150), (0, 100)]
         fd = self.cutPolygon(image, polygon)
         # cut fd to size (87,150)
@@ -247,8 +247,7 @@ class GUI:
 
     def symmetry22Star(self, image):
         # uses horizontal mirrors
-        size = (200, 100)
-        fd = image.resize(size)
+        fd = image
         fdRotated = self.rotate(180, fd)
         bottom = self.imageHorizontalStack(fd, fdRotated)
         top = bottom.transpose(Image.FLIP_TOP_BOTTOM)
@@ -268,7 +267,6 @@ class GUI:
         # bug: black line appears after second diagonal flip. Some problem with a mask/image paste in imageStack?
         triangle = [(0,200),(100,100),(200,200)]
         fd = self.cutPolygon(image,triangle)
-        self.placeImage(fd, (0,0))
         fdDiagFlippedTopLeft = self.flipAcrossDiagonal(fd)
         triangleBottomRight = self.imageStack(fd, fdDiagFlippedTopLeft)
         triangleTopleft = self.flipAcrossDiagonal(triangleBottomRight, topLeft=False)

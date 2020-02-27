@@ -19,6 +19,8 @@ from the command line.
 
 Every plane symmetry group has been implemented except four - p3m1, p31m, p6 and p6m. https://en.wikipedia.org/wiki/Wallpaper_group
 
+This project was a submission for an assignment for the unit OLE Symmetry at USYD. The supporting document .docx is included in this repository as a requirement for this assignment, and is not necessary for use of this program.
+
 ###### Bugs
 
 Text on buttons may not be showing correctly - I think this an issue with MacOSX and might be fine on some versions or on Windows.
