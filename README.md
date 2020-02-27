@@ -21,6 +21,3 @@ from the command line.
 ###### Bugs
 
 Text on buttons may not be showing correctly - I think this an issue with MacOS and might be fine on some OS versions or on Windows.
-The buttons, in order are supposed to be
-
-Choose an image
